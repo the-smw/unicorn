@@ -1,0 +1,186 @@
+/*-----------*\
+*
+* BASE STYLES 
+*
+\*-----------*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 2vh;
+}
+
+
+
+
+
+/*----------*\
+*
+*   LAYOUT
+*
+\*----------*/
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat (2, 1fr);
+  grid-template-rows: 1fr auto;
+  grid-template-areas: 
+    "header header"
+    "left right";
+}
+
+
+/* Grid areas */
+
+header {grid-area: header;}
+.left {grid-area: left;}
+.right {grid-area: right;}
+
+
+header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.left, .right {
+  display: flex;
+  width: 50vw;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.right {
+  justify-content: flex-start;
+}
+
+
+
+
+
+/*----------*\
+*
+* TYPOGRAPHY
+*
+\*----------*/
+h1 {
+  font-family: 'Prida02Calt', cursive, serif;
+  font-size: 13vh;
+  line-height: 1.5;
+  letter-spacing: .3rem;
+  margin-right: 2vw;
+  margin-top: 7vh;
+  font-weight: 800;
+}
+
+
+nav li {
+  font-family: 'Migrator', serif;
+  font-size: 2.5vh;
+  letter-spacing: .123rem;
+  line-height: 3rem;
+  height: 3rem;
+}
+
+
+
+/*--------*\
+*
+*  IMAGES
+*
+\*--------*/
+
+img {
+  height: 80vh;
+  margin-left: 10vw;
+}
+
+
+
+
+
+/*------------*\
+*
+*  COMPONENTS
+*
+\*------------*\
+
+/*==== 1. MAVIGATION ====*/
+
+nav ul {
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  width: 8vw;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+/* Dropdown menu */
+
+li ul {
+  display: none;
+  position: absolute;
+  background-color: hotpink;
+  border-radius: 0px 0px 10px 10px;
+}
+
+li:hover ul {
+  display: block;
+}
+
+
+li ul li {
+  width: 10vw;
+  padding: 1rem;
+}
+
+
+li ul li a {
+  line-height: 1.5;
+  font-size: 2vh;
+  padding: .3rem;
+}
+
+li ul li a:hover {
+  background-color: lightpink;
+}
+
+/*==== 2. SIGN UP BUTTON ====*/
+
+.sign-up {
+  display: inline-block;
+  font-family: 'Migrator', serif;
+  font-size: 2.5vh;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  background-color: lightpink;
+  border-radius: 10px;
+  margin-top: .3rem;
+  margin-left: 1vw;
+  height: 3rem;
+  padding: 8px 14px; 
+}
+
