@@ -13,6 +13,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   font-size: 2vh;
+  font-family: 'Migrator', serif;
 }
 
 
@@ -116,6 +117,11 @@ img {
 
 /*==== 1. MAVIGATION ====*/
 
+nav {
+  margin-right: 2vh;
+}
+
+
 nav ul {
   text-align: center;
 }
@@ -126,10 +132,32 @@ nav li {
   position: relative;
 }
 
-nav a {
+.with-hover {
+  font-family: 'Migrator', serif;
   display: block;
   text-decoration: none;
   color: #ffffff;
+  position: relative;
+}
+
+.with-hover::after {
+  content: '';
+  width: 0%;
+  height: 7px;
+  background: #8A2387;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+
+
+.with-hover:hover::after {
+  left: 0%;
+  width: 100%;
 }
 
 
@@ -139,7 +167,9 @@ nav a {
 li ul {
   display: none;
   position: absolute;
-  background-color: hotpink;
+  max-width: 100%;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0px 0px 10px 10px;
 }
 
@@ -149,20 +179,25 @@ li:hover ul {
 
 
 li ul li {
-  width: 10vw;
-  padding: 1rem;
+  width: 100%;
+  padding: .5rem;
 }
 
 
 li ul li a {
-  line-height: 1.5;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Migrator', serif;
+  line-height: 1.2;
   font-size: 2vh;
   padding: .3rem;
 }
 
 li ul li a:hover {
-  background-color: lightpink;
+  transform: scale(1.1);
 }
+
 
 /*==== 2. SIGN UP BUTTON ====*/
 
@@ -176,7 +211,10 @@ li ul li a:hover {
   color: #ffffff;
   text-align: center;
   vertical-align: middle;
-  background-color: lightpink;
+  background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   border-radius: 10px;
   margin-top: .3rem;
   margin-left: 1vw;
