@@ -9,6 +9,18 @@
 }
 
 
+@font-face {
+  font-family: 'Migrator';
+  src: url('assets/fonts/MigratorRegular-2wGd.ttf');
+}
+
+@font-face {
+  font-family: 'Prida02Calt';
+  src: url('assets/fonts/Prida02calt-j3zO.otf');
+}
+
+
+
 body {
   background-color: #000000;
   color: #ffffff;
