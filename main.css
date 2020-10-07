@@ -25,7 +25,28 @@ body {
   background-color: #000000;
   color: #ffffff;
   font-size: 2vh;
-  font-family: 'Migrator', serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+section {
+  padding: 1rem;
+  margin-bottom: 5vh;
+}
+
+
+@media (min-width: 1200px) {
+  section {
+    border-left: 3px solid #F6B1C3;
+    border-right: 3px solid #F6B1C3;
+  }
+}
+
+
+
+article {
+  width: 100%;
+  margin-bottom: 10vh;
 }
 
 
@@ -46,17 +67,23 @@ body {
   grid-template-rows: 1fr auto;
   grid-template-areas: 
     "header header"
-    "left right";
+    "left right"
+    "main main"
+    "footer footer";
 }
 
 @media (max-width: 1024px) {
   .container {
+    width: 100%;
+    height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat (3, 1fr);
+    grid-template-rows: repeat (5, 1fr);
     grid-template-areas: 
       "header"
       "right"
       "left"
+      "main"
+      "footer";
   }
 }
 
@@ -67,6 +94,8 @@ body {
 header {grid-area: header;}
 .left {grid-area: left;}
 .right {grid-area: right;}
+main {grid-area: main;}
+footer {grid-area: footer;}
 
 
 
@@ -111,6 +140,64 @@ header {
 
 
 
+main {
+  width: 100vw;
+}
+
+
+@media (min-width: 1024px) {
+  main {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  main {
+    width: 60vw;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .about-us, .contact-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+  }
+  
+  .col {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+  }
+  
+  .contact-us {
+    justify-content: space-around;
+  }
+}
+
+
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 /*----------*\
 *
@@ -139,6 +226,54 @@ h1 {
 
 
 
+h2 {
+  font-family: 'Prida02Calt', cursive, serif;
+  font-size: 10vh;
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: .3rem;
+  margin-top: 5vh;
+}
+
+
+h3 {
+  font-family: 'Migrator', serif;
+  font-size: 3.5vh;
+  letter-spacing: .15rem;
+  margin-bottom: 1rem;
+}
+
+
+@media (min-width: 1024px) {
+  .follow-us {
+    text-align: center;
+  }
+}
+
+
+
+p {
+  font-size: 2.3vh;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+
+@media (max-width: 360px) {
+  p {
+    font-size: 3vh;
+  }
+}
+
+.contact-info {
+  text-align: center;
+  font-style: italic;
+  letter-spacing: .15rem;
+}
+
+
+
 nav li {
   font-family: 'Migrator', serif;
   font-size: 2.5vh;
@@ -148,6 +283,35 @@ nav li {
 }
 
 
+
+.about {
+  color: #ffffff;
+  display: block;
+  text-align: left;
+  font-size: 5vh;
+  margin-bottom: .5rem;
+}
+
+
+.contact {
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  font-size: 10vh;
+}
+
+
+footer p {
+  margin-bottom: 0;
+}
+
+small {
+  font-size: 1.5vh;
+  line-height: 1.1;
+  letter-spacing: .15rem;
+  text-align: center;
+  padding: .5rem;
+}
 
 /*--------*\
 *
@@ -164,6 +328,7 @@ img {
   img {
     width: 70vw;
     height: auto;
+    margin: 0 auto;
   }
 }
 
@@ -178,7 +343,7 @@ img {
 /*==== 1. MAVIGATION ====*/
 
 nav {
-  margin-right: 2vh;
+  margin-right: 2vw;
 }
 
 
@@ -289,6 +454,9 @@ li ul li a:hover {
 }
 
 
+
+
+
 /*==== 2. SIGN UP BUTTON ====*/
 
 .sign-up {
@@ -319,4 +487,83 @@ li ul li a:hover {
   .sign-up {
     margin-right: 2rem;
   }
+}
+
+
+
+
+
+/*==== 3. READ MORE BUTTON ====*/
+
+.more {
+  display: inline-block;
+  font-size: 1.7vh;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #F6B1C3;
+  border-radius: 20px;
+  padding: .8rem;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+
+.more:hover {
+  background-color: #F6B1C3;
+  transition: .7s ease-in-out;
+}
+
+
+/*==== 4. SOCIAL LINKS ====*/
+
+.social {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 5vh; 
+}
+
+.social:hover {
+  color: #F6B1C3;
+}
+
+
+
+.design {
+  text-decoration: none;
+  color: #F6B1C3;
+  font-weight: 700;
+}
+
+
+
+
+
+/*==== 5. SCROLLBAR ====*/
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+  opacity: 10%;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F6B1C3; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
